@@ -23,7 +23,7 @@ function App() {
     setIncompleteTodos(newTodos);
   };
 
-  const onClickComplte = (index) => {
+  const onClickComplete = (index) => {
     const newIncompleteTodos = [...incompleteTodos];
     newIncompleteTodos.splice(index, 1);
     const newCompleteTodos = [...completeTodos, incompleteTodos[index]];
@@ -56,9 +56,9 @@ function App() {
       )}
       <IncompleteTodos
         todos={incompleteTodos}
-        onClickComplte={onClickComplte}
+        onClickComplete={onClickComplete}
         onClickDelete={onClickDelete}
-      ></IncompleteTodos>
+      />
       <CompleteTodos
         todos={completeTodos}
         onClickBack={onClickBack}
